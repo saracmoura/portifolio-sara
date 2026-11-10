@@ -1,0 +1,266 @@
+/* ---------- CORES ---------- */
+:root {
+  --verde: #2f7d5b;
+  --verde-escuro: #1f5c42;
+  --verde-claro: #d8efe2;
+  --menta: #a8dcc0;
+  --lima: #c9e265;
+  --lima-escuro: #587a0f;
+  --fundo: #f3faf5;
+  --texto: #243a2f;
+}
+
+/* ---------- GERAL ---------- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background: var(--fundo);
+  color: var(--texto);
+}
+
+h1, h2, h3 {
+  color: var(--verde-escuro);
+  font-weight: 600;
+}
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+/* Título da seção não fica escondido atrás do menu fixo */
+section[id] {
+  scroll-margin-top: 5rem;
+}
+
+a:focus-visible,
+.btn:focus-visible {
+  outline: 3px solid var(--lima-escuro);
+  outline-offset: 2px;
+}
+
+/* ---------- MENU ---------- */
+.navbar {
+  background: var(--verde-claro);
+  --bs-navbar-brand-color: var(--verde-escuro);
+  --bs-navbar-brand-hover-color: var(--verde);
+  --bs-navbar-color: var(--verde-escuro);
+  --bs-navbar-hover-color: var(--verde);
+}
+
+.navbar-brand {
+  font-weight: 600;
+}
+
+/* ---------- BOTÕES ---------- */
+.btn-primary {
+  --bs-btn-bg: var(--verde-escuro);
+  --bs-btn-border-color: var(--verde-escuro);
+  --bs-btn-hover-bg: var(--verde);
+  --bs-btn-hover-border-color: var(--verde);
+  --bs-btn-active-bg: var(--verde);
+  --bs-btn-active-border-color: var(--verde);
+}
+
+.btn-outline-primary {
+  --bs-btn-color: var(--verde-escuro);
+  --bs-btn-border-color: var(--verde-escuro);
+  --bs-btn-hover-bg: var(--verde-escuro);
+  --bs-btn-hover-border-color: var(--verde-escuro);
+  --bs-btn-active-bg: var(--verde);
+  --bs-btn-active-border-color: var(--verde);
+}
+
+/* ---------- INÍCIO ---------- */
+.hero {
+  padding: 3rem 0 4rem;
+  background: linear-gradient(180deg, #e3f4ea 0%, var(--fundo) 100%);
+}
+
+.subtitle {
+  color: var(--verde);
+  font-size: 2.0rem;
+  font-weight: 600;
+}
+
+.frase {
+  max-width: 34rem;
+}
+
+.foto {
+  width: 350px;
+  height: 350px;
+  margin-bottom: 1.5rem;
+  padding: 6px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--menta), var(--verde), var(--lima));
+}
+
+.foto-interna {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--verde-escuro);
+}
+
+.foto-interna img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Janelinha de código */
+.codigo {
+  max-width: 26rem;
+  background: #fff;
+  border: 2px solid var(--verde-claro);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.codigo-topo {
+  display: flex;
+  gap: .4rem;
+  padding: .6rem .9rem;
+  background: var(--verde-claro);
+}
+
+.codigo-topo span {
+  width: .75rem;
+  height: .75rem;
+  border-radius: 50%;
+  background: var(--verde);
+}
+
+.codigo-topo span:nth-child(2) { background: var(--menta); }
+.codigo-topo span:nth-child(3) { background: var(--lima); }
+
+.codigo pre {
+  margin: 0;
+  padding: 1rem 1.2rem;
+  font-family: 'Fira Code', monospace;
+  font-size: .82rem;
+  line-height: 1.7;
+  color: var(--texto);
+  overflow-x: auto;
+}
+
+.chave { color: var(--verde-escuro); }
+.texto-cod { color: var(--lima-escuro); }
+
+/* ---------- SEÇÕES ---------- */
+.secao {
+  margin-top: 4rem;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 4rem;
+  height: 4px;
+  margin-top: .6rem;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--verde), var(--lima));
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+}
+
+/* Linha do tempo */
+.jornada {
+  padding-left: 1.5rem;
+  border-left: 3px solid var(--menta);
+  list-style: none;
+}
+
+.jornada li {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.jornada li::before {
+  content: "";
+  position: absolute;
+  left: calc(-1.5rem - 9px);
+  top: .35rem;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--verde);
+  border: 3px solid var(--fundo);
+}
+
+.jornada h3 {
+  font-size: 1.1rem;
+  margin-bottom: .2rem;
+}
+
+/* Tecnologias */
+.tecnologias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  padding: 0;
+  list-style: none;
+}
+
+.tecnologias li {
+  padding: .4rem 1rem;
+  border-radius: 2rem;
+  background: #fff;
+  border: 2px solid var(--menta);
+  color: var(--verde-escuro);
+  font-family: 'Fira Code', monospace;
+  font-size: 1.30rem;
+}
+
+.tecnologias li:nth-child(even) {
+  border-color: var(--lima);
+}
+
+/* Cards dos projetos */
+.card {
+  border: 0;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(31, 92, 66, .15);
+  transition: transform .25s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card-img-top {
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-title {
+  color: var(--verde-escuro);
+}
+
+/* ---------- RODAPÉ ---------- */
+footer {
+  margin-top: 4rem;
+  padding: 1.5rem 0;
+  color: var(--verde-escuro);
+  background: var(--verde-claro);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .card { transition: none; }
+  .card:hover { transform: none; }
+}
